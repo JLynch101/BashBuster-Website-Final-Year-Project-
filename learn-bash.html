@@ -1,0 +1,1365 @@
+<!-- Learn bash
+This is a page that provides information and outlines commands used in bash Created using Elementor -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+		<title>Learn Bash &#8211; Bash Buster</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Bash Buster &raquo; Feed" href="https://bashbuster.org/feed" />
+<link rel="alternate" type="application/rss+xml" title="Bash Buster &raquo; Comments Feed" href="https://bashbuster.org/comments/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bashbuster.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.1"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' href='./css/dist-block-library-style.min.css'>
+<link rel='stylesheet' href='./css/export-wp-page-to-static-html-pro-premium-public-css-export-wp-page-to-static-html-public.css'>
+<link rel='stylesheet' href='./css/contact-form-7-includes-css-styles.css'>
+<link rel='stylesheet' href='./css/quiz-maker-public-css-quiz-maker-public.css'>
+<link rel='stylesheet' href='./css/neve-style-main.min.css'>
+<style id='neve-style-inline-css' type='text/css'>
+.header-menu-sidebar-inner li.menu-item-nav-search { display: none; }
+ .container{ max-width: 748px; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:718px } .button.button-primary, button, input[type=button], .btn, input[type="submit"], /* Buttons in navigation */ ul[id^="nv-primary-navigation"] li.button.button-primary > a, .menu li.button.button-primary > a, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ background-color: #11ff00;color: var(--nv-text-color);border-radius:0px 0px 0px 0px;border:none;border-width:1px 1px 1px 1px; font-size: 14px; } .button.button-primary:hover, ul[id^="nv-primary-navigation"] li.button.button-primary > a:hover, .menu li.button.button-primary > a:hover, .wp-block-button.is-style-primary .wp-block-button__link:hover, .wc-block-grid .wp-block-button .wp-block-button__link:hover, form input[type="submit"]:hover, form button[type="submit"]:hover, #comments input[type="submit"]:hover{ background-color: var(--nv-secondary-accent);color: var(--nv-text-color); } .button.button-secondary:not(.secondary-default), .wp-block-button.is-style-secondary .wp-block-button__link{ background-color: var(--nv-primary-accent);color: var(--nv-text-dark-bg);border-radius:0px 0px 0px 0px;border:none;border-width:2px 2px 2px 2px; font-size: 14px; } .button.button-secondary.secondary-default{ background-color: var(--nv-primary-accent);color: var(--nv-text-dark-bg);border-radius:0px 0px 0px 0px;border:none;border-width:2px 2px 2px 2px; } .button.button-secondary:not(.secondary-default):hover, .wp-block-button.is-style-secondary .wp-block-button__link:hover{ background-color: var(--nv-primary-accent);color: var(--nv-text-dark-bg); } .button.button-secondary.secondary-default:hover{ background-color: var(--nv-primary-accent);color: var(--nv-text-dark-bg); } .button.button-primary, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ padding:16px 35px 16px 35px; } .button.button-secondary:not(.secondary-default), .wp-block-button.is-style-secondary .wp-block-button__link{ padding:16px 35px 16px 35px; } body, .site-title{ font-size: 15px; line-height: 1.6; letter-spacing: 0px; font-weight: 400; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } h1, .single h1.entry-title{ font-size: 39px; line-height: 1.2em; letter-spacing: 0px; font-weight: 600; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } h2{ font-size: 30px; line-height: 1.3em; letter-spacing: 0px; font-weight: 600; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } h3, .woocommerce-checkout h3{ font-size: 20px; line-height: 1.3em; letter-spacing: 0px; font-weight: 600; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } h4{ font-size: 16px; line-height: 1.3em; letter-spacing: 0px; font-weight: 600; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } h5{ font-size: 14px; line-height: 1.3em; letter-spacing: 0px; font-weight: 600; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } h6{ font-size: 14px; line-height: 1.3em; letter-spacing: 0px; font-weight: 600; text-transform: none; font-family: Poppins, var(--nv-fallback-ff); } form:not([role="search"]):not(.woocommerce-cart-form):not(.woocommerce-ordering):not(.cart) input:read-write:not(#coupon_code), form textarea, form select{ margin-bottom: 10px; } form input:read-write, form textarea, form select, form select option, form.wp-block-search input.wp-block-search__input{ background-color: #ffffff;color: #0fdb1e; font-family: Poppins, var(--nv-fallback-ff); } form label, .wpforms-container .wpforms-field-label{ margin-bottom: 10px; } form.search-form input:read-write{ padding-right:45px !important; font-family: Poppins, var(--nv-fallback-ff); } .header-main-inner,.header-main-inner a:not(.button),.header-main-inner .navbar-toggle{ color: var(--nv-text-color); } .header-main-inner .nv-icon svg,.header-main-inner .nv-contact-list svg{ fill: var(--nv-text-color); } .header-main-inner .icon-bar{ background-color: var(--nv-text-color); } .hfg_header .header-main-inner .nav-ul .sub-menu{ background-color: var(--nv-site-bg); } .hfg_header .header-main-inner{ background-color: var(--nv-site-bg); } .header-bottom-inner,.header-bottom-inner a:not(.button),.header-bottom-inner .navbar-toggle{ color: #575757; } .header-bottom-inner .nv-icon svg,.header-bottom-inner .nv-contact-list svg{ fill: #575757; } .header-bottom-inner .icon-bar{ background-color: #575757; } .hfg_header .header-bottom-inner .nav-ul .sub-menu{ background-color: #000000; } .hfg_header .header-bottom-inner{ background-color: #000000; } .header-menu-sidebar .header-menu-sidebar-bg,.header-menu-sidebar .header-menu-sidebar-bg a:not(.button),.header-menu-sidebar .header-menu-sidebar-bg .navbar-toggle{ color: var(--nv-text-color); } .header-menu-sidebar .header-menu-sidebar-bg .nv-icon svg,.header-menu-sidebar .header-menu-sidebar-bg .nv-contact-list svg{ fill: var(--nv-text-color); } .header-menu-sidebar .header-menu-sidebar-bg .icon-bar{ background-color: var(--nv-text-color); } .hfg_header .header-menu-sidebar .header-menu-sidebar-bg .nav-ul .sub-menu{ background-color: var(--nv-site-bg); } .hfg_header .header-menu-sidebar .header-menu-sidebar-bg{ background-color: var(--nv-site-bg); } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 153px; } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle, .header-menu-sidebar .close-sidebar-panel .navbar-toggle{ border-radius:3px;border:1px solid;border-width:1px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul .neve-mm-heading span,.builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret{ color: #0fdb1e; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a:after,.builder-item--primary-menu .nav-menu-primary > .nav-ul li > .has-caret > a:after{ background-color: #195e10; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item):hover > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret{ color: #195e10; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret svg{ fill: #195e10; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > .has-caret > a{ color: #004200; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > .has-caret svg{ fill: #004200; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 600; text-transform: uppercase; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .footer-bottom-inner{ background-color: #000000; } .footer-bottom-inner,.footer-bottom-inner a:not(.button),.footer-bottom-inner .navbar-toggle{ color: var(--nv-text-dark-bg); } .footer-bottom-inner .nv-icon svg,.footer-bottom-inner .nv-contact-list svg{ fill: var(--nv-text-dark-bg); } .footer-bottom-inner .icon-bar{ background-color: var(--nv-text-dark-bg); } .footer-bottom-inner .nav-ul .sub-menu{ background-color: #000000; } .nav-menu-footer #footer-menu > li > a{ color: var(--nv-text-color); } #footer-menu > li > a:after{ background-color: var(--nv-primary-accent); } .nav-menu-footer:not(.style-full-height) #footer-menu > li:hover > a{ color: var(--nv-primary-accent); } .builder-item--footer-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--footer-menu .style-full-height .nav-ul#footer-menu > li:hover > a:after{ width: calc(100% + 20px); } .builder-item--footer-menu .nav-ul a{ min-height: 25px; } .builder-item--footer-menu li > a{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 500; text-transform: none; } .builder-item--footer-menu li > a svg{ width: 1em;height: 1em; } .builder-item--footer-menu{ padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 500; text-transform: none; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } @media(min-width: 576px){ .container{ max-width: 992px; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:962px } .button.button-primary, button, input[type=button], .btn, input[type="submit"], /* Buttons in navigation */ ul[id^="nv-primary-navigation"] li.button.button-primary > a, .menu li.button.button-primary > a, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ font-size: 14px; } .button.button-secondary:not(.secondary-default), .wp-block-button.is-style-secondary .wp-block-button__link{ font-size: 14px; } .button.button-primary, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ padding:16px 35px 16px 35px; } .button.button-secondary:not(.secondary-default), .wp-block-button.is-style-secondary .wp-block-button__link{ padding:16px 35px 16px 35px; } body, .site-title{ font-size: 16px; line-height: 1.6; letter-spacing: 0px; } h1, .single h1.entry-title{ font-size: 55px; line-height: 1.3em; letter-spacing: 0px; } h2{ font-size: 35px; line-height: 1.3em; letter-spacing: 0px; } h3, .woocommerce-checkout h3{ font-size: 20px; line-height: 1.3em; letter-spacing: 0px; } h4{ font-size: 16px; line-height: 1.3em; letter-spacing: 0px; } h5{ font-size: 14px; line-height: 1.3em; letter-spacing: 0px; } h6{ font-size: 14px; line-height: 1.3em; letter-spacing: 0px; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 32px; } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .builder-item--footer-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--footer-menu .style-full-height .nav-ul#footer-menu > li:hover > a:after{ width: calc(100% + 20px); } .builder-item--footer-menu .nav-ul a{ min-height: 25px; } .builder-item--footer-menu li > a{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; } .builder-item--footer-menu li > a svg{ width: 1em;height: 1em; } .builder-item--footer-menu{ padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } }@media(min-width: 960px){ .container{ max-width: 1170px; } body:not(.single):not(.archive):not(.blog):not(.search) .neve-main > .container .col{ max-width: 100%; } body:not(.single):not(.archive):not(.blog):not(.search) .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .archive-container .nv-index-posts.col{ max-width: 100%; } .neve-main > .archive-container .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .single-post-container .nv-single-post-wrap.col{ max-width: 70%; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid.single-post-container .alignfull > [class*="__inner-container"], .container-fluid.single-post-container .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .neve-main > .single-post-container .nv-sidebar-wrap{ max-width: 30%; } .button.button-primary, button, input[type=button], .btn, input[type="submit"], /* Buttons in navigation */ ul[id^="nv-primary-navigation"] li.button.button-primary > a, .menu li.button.button-primary > a, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ font-size: 16px; } .button.button-secondary:not(.secondary-default), .wp-block-button.is-style-secondary .wp-block-button__link{ font-size: 16px; } .button.button-primary, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ padding:16px 35px 16px 35px; } .button.button-secondary:not(.secondary-default), .wp-block-button.is-style-secondary .wp-block-button__link{ padding:16px 35px 16px 35px; } body, .site-title{ font-size: 17px; line-height: 1.7; letter-spacing: 0px; } h1, .single h1.entry-title{ font-size: 70px; line-height: 1.3em; letter-spacing: 0px; } h2{ font-size: 50px; line-height: 1.3em; letter-spacing: 0px; } h3, .woocommerce-checkout h3{ font-size: 24px; line-height: 1.3em; letter-spacing: 0px; } h4{ font-size: 20px; line-height: 1.3em; letter-spacing: 0px; } h5{ font-size: 16px; line-height: 1.3em; letter-spacing: 0px; } h6{ font-size: 16px; line-height: 1.3em; letter-spacing: 0px; } .header-main-inner{ height:183px; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 350px; } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:92px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart) > a:after{ left:-46px;right:-46px } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 92px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 0.8em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 0.8em;height: 0.8em; } .builder-item--footer-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--footer-menu .style-full-height .nav-ul#footer-menu > li > a:after{ left:-10px;right:-10px } .builder-item--footer-menu .style-full-height .nav-ul#footer-menu > li:hover > a:after{ width: calc(100% + 20px); } .builder-item--footer-menu .nav-ul a{ min-height: 25px; } .builder-item--footer-menu li > a{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; } .builder-item--footer-menu li > a svg{ width: 1em;height: 1em; } .builder-item--footer-menu{ padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } }.nv-content-wrap .elementor a:not(.button):not(.wp-block-file__button){ text-decoration: none; }:root{--nv-primary-accent:#2b2b2b;--nv-secondary-accent:#fcaf3b;--nv-site-bg:#000000;--nv-light-bg:#000000;--nv-dark-bg:#14171c;--nv-text-color:#0fdb1e;--nv-text-dark-bg:#0fdb1e;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Lucida Sans Unicode, Lucida Grande, sans-serif;}
+:root{--e-global-color-nvprimaryaccent:#2b2b2b;--e-global-color-nvsecondaryaccent:#fcaf3b;--e-global-color-nvsitebg:#000000;--e-global-color-nvlightbg:#000000;--e-global-color-nvdarkbg:#14171c;--e-global-color-nvtextcolor:#0fdb1e;--e-global-color-nvtextdarkbg:#0fdb1e;--e-global-color-nvc1:#77b978;--e-global-color-nvc2:#f37262;}
+</style>
+<link rel='stylesheet' href='./css/elementor-assets-lib-eicons-css-elementor-icons.min.css'>
+<link rel='stylesheet' href='./css/elementor-assets-lib-animations-animations.min.css'>
+<link rel='stylesheet' href='./css/elementor-assets-css-frontend-legacy.min.css'>
+<link rel='stylesheet' href='./css/elementor-assets-css-frontend.min.css'>
+<link rel='stylesheet' href='./css/elementor-css-post-20.css'>
+<link rel='stylesheet' href='./css/elementor-pro-assets-css-frontend.min.css'>
+<link rel='stylesheet' href='./css/elementor-css-global.css'>
+<link rel='stylesheet' href='./css/elementor-css-post-43.css'>
+<link rel='stylesheet' href='./css/quiz-maker-admin-css-admin.css'>
+<link rel='stylesheet' id='neve-google-font-poppins-css'  href='//fonts.googleapis.com/css?family=Poppins%3A400%2C600&#038;display=swap&#038;ver=2.11.1' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CYantramanav%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' href='./css/elementor-assets-lib-font-awesome-css-fontawesome.min.css'>
+<link rel='stylesheet' href='./css/elementor-assets-lib-font-awesome-css-solid.min.css'>
+<link rel='stylesheet' href='./css/elementor-assets-lib-font-awesome-css-regular.min.css'>
+<link rel='stylesheet' href='./css/profile-builder-assets-css-style-front-end.css'>
+		<script>
+			/* <![CDATA[ */
+			var rcewpp = {
+				"ajax_url":"https://bashbuster.org/wp-admin/admin-ajax.php",
+				"nonce": "3ee389d0be",
+				"home_url": "https://bashbuster.org/",
+				"settings_icon": 'https://bashbuster.org/wp-content/plugins/export-wp-page-to-static-html-pro-premium/admin/images/settings.png',
+				"settings_hover_icon": 'https://bashbuster.org/wp-content/plugins/export-wp-page-to-static-html-pro-premium/admin/images/settings_hover.png'
+			};
+			/* ]]\> */
+		</script>
+		<script type='text/javascript' src='./js/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='./js/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='./js/export-wp-page-to-static-html-public.js' id='export-wp-page-to-static-html-js'></script>
+<link rel="https://api.w.org/" href="https://bashbuster.org/wp-json/" /><link rel="alternate" type="application/json" href="https://bashbuster.org/wp-json/wp/v2/pages/43" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bashbuster.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bashbuster.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.1" />
+<link rel="canonical" href="./index.html" />
+<link rel='shortlink' href='https://bashbuster.org/?p=43' />
+<link rel="alternate" type="application/json+oembed" href="https://bashbuster.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbashbuster.org%2Flearn-bash" />
+<link rel="alternate" type="text/xml+oembed" href="https://bashbuster.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbashbuster.org%2Flearn-bash&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://bashbuster.org/wp-content/uploads/2021/04/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://bashbuster.org/wp-content/uploads/2021/04/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://bashbuster.org/wp-content/uploads/2021/04/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://bashbuster.org/wp-content/uploads/2021/04/cropped-favicon-270x270.png" />
+
+	</head>
+
+<body data-rsssl=1  class="page-template page-template-page-templates page-template-template-pagebuilder-full-width page-template-page-templatestemplate-pagebuilder-full-width-php page page-id-43 wp-custom-logo nv-sidebar-full-width menu_sidebar_slide_left elementor-default elementor-kit-20 elementor-page elementor-page-43" id="neve_body"  >
+<div class="wrapper">
+	
+	<header class="header" role="banner">
+		<a class="neve-skip-link show-on-focus" href="" tabindex="0">
+			Skip to content		</a>
+		<div id="header-grid"  class="hfg_header site-header">
+	
+<nav class="header--row header-main hide-on-mobile hide-on-tablet layout-full-contained nv-navbar header--row"
+	data-row-id="main" data-show-on="desktop">
+
+	<div
+		class="header--row-inner header-main-inner">
+		<div class="container">
+			<div
+				class="row row--wrapper"
+				data-section="hfg_header_layout_main" >
+				<div class="builder-item hfg-item-last hfg-item-first col-12 desktop-center"><div class="item--inner builder-item--logo"
+		data-section="title_tagline"
+		data-item-id="logo">
+	<div class="site-logo">
+	<a class="brand" href="./index.html" title="Bash Buster"
+			aria-label="Bash Buster"><div class="logo-on-top"><img width="1000" height="359" src="./images/cropped-logo1.png" class="attachment-full size-full" alt="" loading="lazy" srcset="./images/cropped-logo1.png 1000w, https://bashbuster.org/wp-content/uploads/2021/04/cropped-logo1-300x108.png 300w, https://bashbuster.org/wp-content/uploads/2021/04/cropped-logo1-768x276.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /><div class="nv-title-tagline-wrap"></div></div></a></div>
+
+	</div>
+
+</div>							</div>
+		</div>
+	</div>
+</nav>
+
+<div class="header--row header-bottom hide-on-mobile hide-on-tablet layout-full-contained header--row"
+	data-row-id="bottom" data-show-on="desktop">
+
+	<div
+		class="header--row-inner header-bottom-inner">
+		<div class="container">
+			<div
+				class="row row--wrapper"
+				data-section="hfg_header_layout_bottom" >
+				<div class="builder-item has-nav hfg-item-last hfg-item-first col-12 desktop-center"><div class="item--inner builder-item--primary-menu has_menu"
+		data-section="header_menu_primary"
+		data-item-id="primary-menu">
+	<div class="nv-nav-wrap">
+	<div role="navigation" class="style-border-bottom nav-menu-primary"
+			aria-label="Primary Menu">
+
+		<ul id="nv-primary-navigation-bottom" class="primary-menu-ul nav-ul"><li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-49"><a href="./index.html">Home</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48"><a href="./index.html"><span class="menu-item-title-wrap">Challenges</span><div class="caret-wrap 2" tabindex="0"><span class="caret"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg></span></div></a>
+<ul class="sub-menu">
+	<li id="menu-item-746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746"><a href="./index.html">How to connect</a></li>
+	<li id="menu-item-496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496"><a href="./index.html">Level 1</a></li>
+	<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a href="./index.html">Level 2</a></li>
+	<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="./index.html">Level 3</a></li>
+	<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="./index.html">Level 4</a></li>
+</ul>
+</li>
+<li id="menu-item-561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="./index.html">Leaderboards</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-43 current_page_item menu-item-51"><a href="./index.html" aria-current="page">Learn Bash</a></li>
+<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="./index.html">Account</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="./index.html">Support</a></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div>							</div>
+		</div>
+	</div>
+</div>
+
+
+<nav class="header--row header-main hide-on-desktop layout-full-contained nv-navbar header--row"
+	data-row-id="main" data-show-on="mobile">
+
+	<div
+		class="header--row-inner header-main-inner">
+		<div class="container">
+			<div
+				class="row row--wrapper"
+				data-section="hfg_header_layout_main" >
+				<div class="builder-item hfg-item-first col-8 mobile-left tablet-left"><div class="item--inner builder-item--logo"
+		data-section="title_tagline"
+		data-item-id="logo">
+	<div class="site-logo">
+	<a class="brand" href="./index.html" title="Bash Buster"
+			aria-label="Bash Buster"><div class="logo-on-top"><img width="1000" height="359" src="./images/cropped-logo1.png" class="attachment-full size-full" alt="" loading="lazy" srcset="./images/cropped-logo1.png 1000w, https://bashbuster.org/wp-content/uploads/2021/04/cropped-logo1-300x108.png 300w, https://bashbuster.org/wp-content/uploads/2021/04/cropped-logo1-768x276.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /><div class="nv-title-tagline-wrap"></div></div></a></div>
+
+	</div>
+
+</div><div class="builder-item hfg-item-last col-4 tablet-right mobile-right"><div class="item--inner builder-item--nav-icon"
+		data-section="header_menu_icon"
+		data-item-id="nav-icon">
+	<div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
+	<button class="navbar-toggle"
+					aria-label="
+			Navigation Menu			">
+				<div class="bars">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</div>
+		<span class="screen-reader-text">Toggle Navigation</span>
+	</button>
+</div> <!--.navbar-toggle-wrapper-->
+
+
+	</div>
+
+</div>							</div>
+		</div>
+	</div>
+</nav>
+
+<div id="header-menu-sidebar" class="header-menu-sidebar menu-sidebar-panel slide_left">
+	<div id="header-menu-sidebar-bg" class="header-menu-sidebar-bg">
+		<div class="close-sidebar-panel navbar-toggle-wrapper">
+			<button class="navbar-toggle active" 					aria-label="
+				Navigation Menu				">
+				<div class="bars">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</div>
+				<span class="screen-reader-text">
+				Toggle Navigation					</span>
+			</button>
+		</div>
+		<div id="header-menu-sidebar-inner" class="header-menu-sidebar-inner ">
+			<div class="builder-item has-nav hfg-item-last hfg-item-first col-12 mobile-left tablet-left desktop-center"><div class="item--inner builder-item--primary-menu has_menu"
+		data-section="header_menu_primary"
+		data-item-id="primary-menu">
+	<div class="nv-nav-wrap">
+	<div role="navigation" class="style-border-bottom nav-menu-primary"
+			aria-label="Primary Menu">
+
+		<ul id="nv-primary-navigation-sidebar" class="primary-menu-ul nav-ul"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-49"><a href="./index.html">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48"><a href="./index.html"><span class="menu-item-title-wrap">Challenges</span><div class="caret-wrap 2" tabindex="0"><span class="caret"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg></span></div></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746"><a href="./index.html">How to connect</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496"><a href="./index.html">Level 1</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a href="./index.html">Level 2</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="./index.html">Level 3</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="./index.html">Level 4</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="./index.html">Leaderboards</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-43 current_page_item menu-item-51"><a href="./index.html" aria-current="page">Learn Bash</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="./index.html">Account</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="./index.html">Support</a></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div>		</div>
+	</div>
+</div>
+<div class="header-menu-sidebar-overlay"></div>
+
+</div>
+	</header>
+
+	
+
+	
+	<main id="content" class="neve-main" role="main">
+
+		<div data-elementor-type="wp-page" data-elementor-id="43" class="elementor elementor-43" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-dc1c8b0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="dc1c8b0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6971771" data-id="6971771" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-28a876f elementor-widget elementor-widget-spacer" data-id="28a876f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-fa6b4b7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fa6b4b7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-71db774" data-id="71db774" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b6cc5d2 elementor-widget elementor-widget-image" data-id="b6cc5d2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="472" height="82" src="./images/learning.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./images/learning.png 472w, https://bashbuster.org/wp-content/uploads/2021/04/learning-300x52.png 300w" sizes="(max-width: 472px) 100vw, 472px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-97b9a32 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="97b9a32" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-840cdd8" data-id="840cdd8" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-54bccbf elementor-toc--minimized-on-tablet elementor-widget elementor-widget-table-of-contents" data-id="54bccbf" data-element_type="widget" data-settings="{&quot;exclude_headings_by_selector&quot;:[],&quot;headings_by_tags&quot;:[&quot;h2&quot;,&quot;h3&quot;,&quot;h4&quot;,&quot;h5&quot;],&quot;marker_view&quot;:&quot;numbers&quot;,&quot;minimize_box&quot;:&quot;yes&quot;,&quot;minimized_on&quot;:&quot;tablet&quot;,&quot;hierarchical_view&quot;:&quot;yes&quot;,&quot;min_height&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;min_height_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;min_height_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="table-of-contents.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toc__header">
+			<h4 class="elementor-toc__header-title">Table of Contents</h4>							<div class="elementor-toc__toggle-button elementor-toc__toggle-button--expand"><i class="fas fa-chevron-down"></i></div>
+				<div class="elementor-toc__toggle-button elementor-toc__toggle-button--collapse"><i class="fas fa-chevron-up"></i></div>
+					</div>
+		<div class="elementor-toc__body">
+			<div class="elementor-toc__spinner-container">
+				<i class="elementor-toc__spinner eicon-loading eicon-animation-spin" aria-hidden="true"></i>
+			</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6d7f496 elementor-widget elementor-widget-spacer" data-id="6d7f496" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b310687 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b310687" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-06126fa" data-id="06126fa" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5d432bd elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="5d432bd" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-code"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Overview of Bash</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-438bb67 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="438bb67" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-77cedd2" data-id="77cedd2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0c9db9b elementor-widget elementor-widget-spacer" data-id="0c9db9b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-063276f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="063276f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f23b57f" data-id="f23b57f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-785d0f1 elementor-widget elementor-widget-text-editor" data-id="785d0f1" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been used as the default login shell for most Linux distributions. Bash was also the default shell in all versions of Apple macOS prior to the 2019 release of macOS Catalina, which changed the default shell to zsh, although Bash currently remains available as an alternative shell</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-eb8384c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="eb8384c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-92c53c0" data-id="92c53c0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-fcf8562 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="fcf8562" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-pen"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Tips &amp; Terminology</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-79928f8 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="79928f8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-10ea343" data-id="10ea343" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-588b2c6 elementor-widget elementor-widget-spacer" data-id="588b2c6" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1e1fc79 elementor-widget elementor-widget-text-editor" data-id="1e1fc79" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Directory</b> &#8211; Folder</p><p><span style="font-weight: bold;">&#8220;Exit&#8221; Command  </span>&#8211; Exits the connected session</p><p><b>&#8220;&#8211;help&#8221;  </b><span style="background-color: var(--nv-site-bg);"><b>Lists other attributes that can be used (eg. &#8220;ls &#8211;help)</b></span></p><p><b>Shell </b>&#8211; Command language used (Bash)</p><p><b>Linux </b>&#8211; Operating system</p><p><b>IP Address</b> &#8211; Numerical label assigned to each device or server</p><p><b> Port </b>&#8211; Communication endpoint</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-48d955a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="48d955a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-addaded" data-id="addaded" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-03795c3 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="03795c3" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-link"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Connecting to a server</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-00a1558 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="00a1558" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2548e22" data-id="2548e22" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a88e251 elementor-widget elementor-widget-spacer" data-id="a88e251" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-32247d2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="32247d2" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2e7a8f4" data-id="2e7a8f4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-61409d7 elementor-widget elementor-widget-text-editor" data-id="61409d7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When connecting to a server, SSH (Secure Shell Protocol) is used on port 22. There are many different attributes that can be used with the SSH command.&nbsp;</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cbf5375 elementor-widget elementor-widget-code-highlight" data-id="cbf5375" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>ssh USERNAME@IP-ADDRESS -p PORT #Connects to an IP address at a specfic port as a user
+</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-88cc227 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="88cc227" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7c19c42" data-id="7c19c42" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a1a784a elementor-widget elementor-widget-spacer" data-id="a1a784a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-930c0ec elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="930c0ec" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-list"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >List Conents</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1633181 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="1633181" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cde048c" data-id="cde048c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5b11630 elementor-widget elementor-widget-spacer" data-id="5b11630" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-654b3de elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="654b3de" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1d6ca50" data-id="1d6ca50" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ace7ae9 elementor-widget elementor-widget-text-editor" data-id="ace7ae9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If a user wants to see the contents of the current directory they can use the &#8220;ls&#8221; command.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f12cd68 elementor-widget elementor-widget-code-highlight" data-id="f12cd68" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>ls #List all unhidden content in the current directory
+
+ls -a #List all hidden and unhidden content in the current directory
+
+ls /home/ #List all unhidden conent in the "home" directory
+
+</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-0d45554 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0d45554" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3bac914" data-id="3bac914" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3e878b5 elementor-widget elementor-widget-spacer" data-id="3e878b5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-acf2b24 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="acf2b24" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-79c43e0" data-id="79c43e0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f45ab5d elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="f45ab5d" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-dice-two"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Run commands together</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-53679d4 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="53679d4" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-61ca2c2" data-id="61ca2c2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c691e9e elementor-widget elementor-widget-spacer" data-id="c691e9e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3603249 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3603249" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bcc5866" data-id="bcc5866" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ddd12ea elementor-widget elementor-widget-text-editor" data-id="ddd12ea" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>We can also run two commands at the same time, this lets us be more efficient. </p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-d9d2361 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9d2361" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b96978d" data-id="b96978d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c4882b4 elementor-widget elementor-widget-code-highlight" data-id="c4882b4" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>cd /videos/ && ls # Changes to the videos directory and lists the contents</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-eed5f32 elementor-widget elementor-widget-spacer" data-id="eed5f32" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-24f748b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="24f748b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d598d2c" data-id="d598d2c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-909d1e3 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="909d1e3" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="far fa-folder"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Change Directory</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-0e67f29 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="0e67f29" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-02a20a4" data-id="02a20a4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0927d00 elementor-widget elementor-widget-spacer" data-id="0927d00" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e8d227c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e8d227c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d349966" data-id="d349966" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bce4c9a elementor-widget elementor-widget-text-editor" data-id="bce4c9a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If we need to navigate to a different directory we can use the &#8220;cd&#8221; command.</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f1a559e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f1a559e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-be95d3e" data-id="be95d3e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9849f98 elementor-widget elementor-widget-code-highlight" data-id="9849f98" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>cd /videos/ #Change to the videos directory
+
+cd -  #Revert back one directory
+
+cd ~ #Change to the home directory</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ae811a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ae811a7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2700736" data-id="2700736" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-47b18a8 elementor-widget elementor-widget-spacer" data-id="47b18a8" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c89f6e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c89f6e1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7df3b22" data-id="7df3b22" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3981d8f elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="3981d8f" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-plus"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Create file/directory</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c56523c elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c56523c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d3f40ae" data-id="d3f40ae" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-99caf71 elementor-widget elementor-widget-spacer" data-id="99caf71" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1211bde elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1211bde" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-be85c3a" data-id="be85c3a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-43c02bd elementor-widget elementor-widget-text-editor" data-id="43c02bd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Sometimes we might need to create a new file or directory. </p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ce3be06 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ce3be06" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c04b025" data-id="c04b025" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9283c53 elementor-widget elementor-widget-code-highlight" data-id="9283c53" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>touch MyFile.txt #Creates a text file called MyFile
+
+mkdir NewPhotos #Creates a new directory called NewPhotos
+
+</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f40b74c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f40b74c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a528629" data-id="a528629" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6fbfb42 elementor-widget elementor-widget-spacer" data-id="6fbfb42" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-cc055ac elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cc055ac" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-da76239" data-id="da76239" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-050c4a2 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="050c4a2" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="far fa-file"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Edit, Copy or Open File</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-7d9fe93 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="7d9fe93" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c5ca4c3" data-id="c5ca4c3" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5a5d11c elementor-widget elementor-widget-spacer" data-id="5a5d11c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3df0e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3df0e58" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d517aa9" data-id="d517aa9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b63b10b elementor-widget elementor-widget-text-editor" data-id="b63b10b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>After creating a file we might need to modify the contents or copy the file.</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1e9fa29 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1e9fa29" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cb277d1" data-id="cb277d1" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a435d6e elementor-widget elementor-widget-code-highlight" data-id="a435d6e" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>nano MyFile.txt #Opens MyFile.txt in a word editor
+
+cat MyFile.txt #Prints the contents of MyFile.txt
+
+cp MyFile.txt NewName.txt #Copies the MyFile.txt and created a new file called NewName.txt
+
+
+</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-08d780f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="08d780f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a98194e" data-id="a98194e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-250fb70 elementor-widget elementor-widget-spacer" data-id="250fb70" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-0c139f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0c139f9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-af143c7" data-id="af143c7" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-65e5c78 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="65e5c78" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-search"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Find contents</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e364966 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="e364966" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e85fcea" data-id="e85fcea" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7f7062e elementor-widget elementor-widget-spacer" data-id="7f7062e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4139de0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4139de0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-51427c5" data-id="51427c5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9695f90 elementor-widget elementor-widget-text-editor" data-id="9695f90" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>We may also need to find a spefic item within a file or folder.</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c0a11cb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c0a11cb" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-28c01dc" data-id="28c01dc" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a3af289 elementor-widget elementor-widget-code-highlight" data-id="a3af289" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>grep Bill Accounts.txt #Prints all the words with "Bill" in the file
+
+tail -n 5  MyFile.txt #Prints the last five lines of the file (-n 5 = only the last five lines)
+
+
+</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-110529a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="110529a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d98ada2" data-id="d98ada2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ab7b34c elementor-widget elementor-widget-spacer" data-id="ab7b34c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b68798c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b68798c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-78e4360" data-id="78e4360" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c0f1b21 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-widget elementor-widget-icon-box" data-id="c0f1b21" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="far fa-file-archive"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >Zip/Unzip</span>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c2448e0 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c2448e0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d05e27e" data-id="d05e27e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6f8828f elementor-widget elementor-widget-spacer" data-id="6f8828f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-74e3232 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="74e3232" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9709e8d" data-id="9709e8d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9cf382f elementor-widget elementor-widget-text-editor" data-id="9cf382f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If we are sending or looking to reduce the file size we may need to compress a directory or file.</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-45bf7bd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="45bf7bd" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-17a87cc" data-id="17a87cc" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cd4e353 elementor-widget elementor-widget-code-highlight" data-id="cd4e353" data-element_type="widget" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-bash ">
+				<code readonly="true" class="language-bash">
+					<xmp>zip Zipfile MyFile #Compresss the MyFile and creates a MyFile.zip
+
+unzip ZipFile.zip # Decompresses the contents of the ZipFile.zip 
+
+</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-31b2f87 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="31b2f87" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d2a0849" data-id="d2a0849" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d95ff65 elementor-widget elementor-widget-spacer" data-id="d95ff65" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+		
+</main><!--/.neve-main-->
+
+<footer class="site-footer" id="site-footer">
+	<div class="hfg_footer">
+		<div class="footer--row footer-bottom layout-fullwidth"
+	id="cb-row--footer-bottom"
+	data-row-id="bottom" data-show-on="desktop">
+	<div
+		class="footer--row-inner footer-bottom-inner footer-content-wrap">
+		<div class="container">
+			<div
+				class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row "
+				data-section="hfg_footer_layout_bottom" >
+				<div class="builder-item hfg-item-first col-5 desktop-center tablet-center mobile-center hfg-item-v-middle"><div class="item--inner builder-item--footer_copyright"
+		data-section="footer_copyright"
+		data-item-id="footer_copyright">
+	<div class="component-wrap">
+	Copyright @ Bashbuster 2021</div>
+
+	</div>
+
+</div><div class="builder-item hfg-item-last col-7 desktop-left tablet-left mobile-left hfg-item-v-middle"><div class="item--inner builder-item--footer-menu has_menu"
+		data-section="footer_menu_primary"
+		data-item-id="footer-menu">
+	<div class="component-wrap">
+	<div role="navigation" class="style-plain nav-menu-footer"
+		aria-label="Footer Menu">
+
+		<ul id="footer-menu" class="footer-menu nav-ul"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-49"><a href="./index.html">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48"><a href="./index.html">Challenges</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="./index.html">Leaderboards</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-43 current_page_item menu-item-51"><a href="./index.html" aria-current="page">Learn Bash</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="./index.html">Account</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="./index.html">Support</a></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div>							</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</footer>
+
+</div><!--/.wrapper-->
+<link rel='stylesheet' href='./css/elementor-pro-assets-css-modules-code-highlight.min.css'>
+<script type='text/javascript' src='./js/wp-polyfill.min.js' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://bashbuster.org/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/bashbuster.org\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='./js/index.js' id='contact-form-7-js'></script>
+<script type='text/javascript' id='neve-script-js-extra'>
+/* <![CDATA[ */
+var NeveProperties = {"ajaxurl":"https:\/\/bashbuster.org\/wp-admin\/admin-ajax.php","nonce":"10047cee9c","isRTL":"","isCustomize":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='./js/frontend.js' id='neve-script-js' async></script>
+<script type='text/javascript' src='./js/comment-reply.min.js' id='comment-reply-js'></script>
+<script type='text/javascript' src='./js/wp-embed.min.js' id='wp-embed-js'></script>
+<script type='text/javascript' src='./js/prism-core.min.js' id='prismjs_core-js'></script>
+<script type='text/javascript' src='./js/prism-autoloader.min.js' id='prismjs_loader-js'></script>
+<script type='text/javascript' src='./js/prism-normalize-whitespace.min.js' id='prismjs_normalize-js'></script>
+<script type='text/javascript' src='./js/prism-toolbar.min.js' id='prismjs_toolbar-js'></script>
+<script type='text/javascript' src='./js/prism-copy-to-clipboard.min.js' id='prismjs_copy_to_clipboard-js'></script>
+<script type='text/javascript' src='./js/webpack-pro.runtime.min.js' id='elementor-pro-webpack-runtime-js'></script>
+<script type='text/javascript' src='./js/webpack.runtime.min.js' id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript' src='./js/frontend-modules.min.js' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='./js/jquery.sticky.min.js' id='elementor-sticky-js'></script>
+<script type='text/javascript' id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/bashbuster.org\/wp-admin\/admin-ajax.php","nonce":"965c8986d3","urls":{"assets":"https:\/\/bashbuster.org\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/bashbuster.org\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type='text/javascript' src='./js/frontend.min.js' id='elementor-pro-frontend-js'></script>
+<script type='text/javascript' src='./js/core.min.js' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='./js/dialog.min.js' id='elementor-dialog-js'></script>
+<script type='text/javascript' src='./js/waypoints.min.js' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='./js/share-link.min.js' id='share-link-js'></script>
+<script type='text/javascript' src='./js/swiper.min.js' id='swiper-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false,"isImprovedAssetsLoading":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.1.4","is_static":false,"experimentalFeatures":{"form-submissions":true},"urls":{"assets":"https:\/\/bashbuster.org\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":43,"title":"Learn%20Bash%20%E2%80%93%20Bash%20Buster","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='./js/frontend.min.js' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='./js/preloaded-elements-handlers.min.js' id='pro-preloaded-elements-handlers-js'></script>
+<script type='text/javascript' src='./js/preloaded-elements-handlers.min.js' id='preloaded-elements-handlers-js'></script>
+</body>
+
+</html>
+
+<!--This file was exported by "Export WP Page to Static HTML" plugin which created by ReCorp (https://myrecorp.com) -->
